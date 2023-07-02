@@ -1,9 +1,10 @@
 on:
     push:
-      branches:
-        - main
-  
-  jobs:
+      branches: [ "main" ]
+    pull_request:
+      branches: [ "main" ]
+
+jobs:
     build-js-production:
       name: Build JavaScript/CSS for Production Server
       runs-on: ubuntu-latest
